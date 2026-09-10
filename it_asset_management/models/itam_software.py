@@ -40,7 +40,7 @@ class ItamSoftware(models.Model):
             "type": "ir.actions.act_window",
             "name": _("Licenses"),
             "res_model": "itam.software.license",
-            "view_mode": "tree,form,kanban",
+            "view_mode": "list,form,kanban",
             "domain": [("software_id", "=", self.id)],
             "context": {"default_software_id": self.id},
         }

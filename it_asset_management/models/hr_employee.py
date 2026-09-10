@@ -23,7 +23,7 @@ class HrEmployee(models.Model):
             "type": "ir.actions.act_window",
             "name": _("IT Assets"),
             "res_model": "itam.asset",
-            "view_mode": "tree,form,kanban",
+            "view_mode": "list,form,kanban",
             "domain": [("assigned_employee_id", "=", self.id)],
             "context": {"search_default_assigned_employee_id": self.id},
         }

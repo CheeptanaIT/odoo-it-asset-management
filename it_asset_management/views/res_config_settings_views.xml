@@ -7,18 +7,18 @@
         <field name="inherit_id" ref="base.res_config_settings_view_form"/>
         <field name="arch" type="xml">
             <xpath expr="//form" position="inside">
-                <app string="IT Asset Management" name="it_asset_management"
-                     logo="/it_asset_management/static/description/icon.png">
+                <app data-string="IT Asset Management" string="IT Asset Management"
+                     name="it_asset_management" groups="it_asset_management.group_itam_manager">
                     <block title="Reminders" name="itam_reminders">
                         <setting string="Warranty reminder lead time"
                                  help="Create an activity this many days before an asset warranty expires.">
                             <field name="itam_warranty_lead_days"/>
-                            <span class="text-muted">days</span>
+                            <span class="text-muted ms-1">days</span>
                         </setting>
                         <setting string="License reminder lead time"
                                  help="Create an activity this many days before a software license expires.">
                             <field name="itam_license_lead_days"/>
-                            <span class="text-muted">days</span>
+                            <span class="text-muted ms-1">days</span>
                         </setting>
                     </block>
                 </app>

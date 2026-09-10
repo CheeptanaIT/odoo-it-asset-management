@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 {
     "name": "IT Asset Management",
-    "version": "17.0.1.0.0",
+    "version": "18.0.1.0.0",
     "summary": "Track IT hardware, assignments, software licenses and repairs",
     "description": """
-Simple IT Asset Management (ITAM) for Odoo 17
+Simple IT Asset Management (ITAM) for Odoo 18
 =============================================
 * Hardware asset register with asset tags, lifecycle and warranty tracking
 * Assign / return assets to employees with a printable handover form

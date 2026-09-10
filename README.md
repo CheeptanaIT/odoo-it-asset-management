@@ -1,4 +1,4 @@
-# IT Asset Management for Odoo 17
+# IT Asset Management for Odoo 18
 
 Two addons live in this folder:
 

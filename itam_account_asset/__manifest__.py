@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     "name": "IT Asset Management - Accounting Bridge",
-    "version": "17.0.1.0.0",
+    "version": "18.0.1.0.0",
     "summary": "Link IT assets to accounting depreciation (account.asset)",
     "description": """
 Bridge between IT Asset Management and Odoo Accounting Assets.

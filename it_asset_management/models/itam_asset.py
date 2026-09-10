@@ -152,7 +152,7 @@ class ItamAsset(models.Model):
             )
 
     @api.model
-    def _group_expand_state(self, states, domain, order):
+    def _group_expand_state(self, values, domain, order=None):
         return [key for key, _label in self._fields["state"].selection]
 
     # ------------------------------------------------------------------
@@ -190,12 +190,8 @@ class ItamAsset(models.Model):
                 vals["barcode"] = vals.get("asset_tag")
         return super().create(vals_list)
 
-    def copy(self, default=None):
-        default = dict(default or {})
-        default.setdefault("asset_tag", _("New"))
-        default.setdefault("barcode", False)
-        default.setdefault("serial_no", False)
-        return super().copy(default)
+    # asset_tag / serial_no / barcode all use copy=False, so a duplicate gets a
+    # fresh tag from create() automatically -- no copy() override needed.
 
     # ------------------------------------------------------------------
     # State actions
@@ -268,7 +264,7 @@ class ItamAsset(models.Model):
             "type": "ir.actions.act_window",
             "name": _("Assignment History"),
             "res_model": "itam.asset.assignment",
-            "view_mode": "tree,form",
+            "view_mode": "list,form",
             "domain": [("asset_id", "=", self.id)],
             "context": {"default_asset_id": self.id},
         }
@@ -279,7 +275,7 @@ class ItamAsset(models.Model):
             "type": "ir.actions.act_window",
             "name": _("Maintenance Logs"),
             "res_model": "itam.maintenance.log",
-            "view_mode": "tree,form,calendar",
+            "view_mode": "list,form,calendar",
             "domain": [("asset_id", "=", self.id)],
             "context": {"default_asset_id": self.id},
         }
@@ -290,7 +286,7 @@ class ItamAsset(models.Model):
             "type": "ir.actions.act_window",
             "name": _("Software Installs"),
             "res_model": "itam.software.install",
-            "view_mode": "tree,form",
+            "view_mode": "list,form",
             "domain": [("asset_id", "=", self.id)],
             "context": {"default_asset_id": self.id},
         }

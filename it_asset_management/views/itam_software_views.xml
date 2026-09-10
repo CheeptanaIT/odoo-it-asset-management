@@ -5,12 +5,12 @@
         <field name="name">itam.software.tree</field>
         <field name="model">itam.software</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="name"/>
                 <field name="publisher"/>
                 <field name="category"/>
                 <field name="license_count" string="# Licenses"/>
-            </tree>
+            </list>
         </field>
     </record>
 
@@ -46,14 +46,14 @@
     <record id="action_itam_software" model="ir.actions.act_window">
         <field name="name">Software Catalogue</field>
         <field name="res_model">itam.software</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">list,form</field>
     </record>
 
     <record id="view_itam_software_install_tree" model="ir.ui.view">
         <field name="name">itam.software.install.tree</field>
         <field name="model">itam.software.install</field>
         <field name="arch" type="xml">
-            <tree decoration-muted="is_active == False">
+            <list decoration-muted="is_active == False">
                 <field name="license_id"/>
                 <field name="software_id"/>
                 <field name="asset_id"/>
@@ -63,7 +63,7 @@
                 <field name="is_active" string="Active"/>
                 <button name="action_uninstall" type="object" string="Uninstall" icon="fa-times"
                         invisible="is_active == False"/>
-            </tree>
+            </list>
         </field>
     </record>
 
@@ -93,7 +93,7 @@
     <record id="action_itam_software_install" model="ir.actions.act_window">
         <field name="name">Software Installs</field>
         <field name="res_model">itam.software.install</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">list,form</field>
     </record>
 
 </odoo>

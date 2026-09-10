@@ -53,7 +53,7 @@ class ItamAssetCategory(models.Model):
 
     @api.constrains("parent_id")
     def _check_parent_recursion(self):
-        if not self._check_recursion():
+        if self._has_cycle():
             raise ValidationError(_("You cannot create recursive categories."))
 
     def action_view_assets(self):
@@ -62,7 +62,7 @@ class ItamAssetCategory(models.Model):
             "type": "ir.actions.act_window",
             "name": _("Assets"),
             "res_model": "itam.asset",
-            "view_mode": "tree,form,kanban",
+            "view_mode": "list,form,kanban",
             "domain": [("category_id", "child_of", self.id)],
             "context": {"default_category_id": self.id},
         }

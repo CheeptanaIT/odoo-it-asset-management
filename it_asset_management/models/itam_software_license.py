@@ -33,7 +33,7 @@ class ItamSoftwareLicense(models.Model):
     seats_used = fields.Integer(compute="_compute_seats", store=True)
     seats_available = fields.Integer(compute="_compute_seats", store=True)
     seat_usage = fields.Float(
-        string="Seat Usage (%)", compute="_compute_seats", store=True, group_operator="avg"
+        string="Seat Usage (%)", compute="_compute_seats", store=True, aggregator="avg"
     )
 
     purchase_date = fields.Date(tracking=True)
@@ -117,7 +117,7 @@ class ItamSoftwareLicense(models.Model):
             "type": "ir.actions.act_window",
             "name": _("Installs"),
             "res_model": "itam.software.install",
-            "view_mode": "tree,form",
+            "view_mode": "list,form",
             "domain": [("license_id", "=", self.id)],
             "context": {"default_license_id": self.id},
         }
