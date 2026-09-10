@@ -1,0 +1,463 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* it_asset_management
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: Thai\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: it_asset_management
+msgid "IT Asset Management"
+msgstr "การจัดการทรัพย์สินไอที"
+
+#. module: it_asset_management
+msgid "IT Assets"
+msgstr "ทรัพย์สินไอที"
+
+#. module: it_asset_management
+msgid "Assets"
+msgstr "ทรัพย์สิน"
+
+#. module: it_asset_management
+msgid "Asset Tag"
+msgstr "รหัสทรัพย์สิน"
+
+#. module: it_asset_management
+msgid "Description"
+msgstr "รายละเอียด"
+
+#. module: it_asset_management
+msgid "Serial Number"
+msgstr "หมายเลขซีเรียล"
+
+#. module: it_asset_management
+msgid "Category"
+msgstr "หมวดหมู่"
+
+#. module: it_asset_management
+msgid "Asset Categories"
+msgstr "หมวดหมู่ทรัพย์สิน"
+
+#. module: it_asset_management
+msgid "Location"
+msgstr "สถานที่"
+
+#. module: it_asset_management
+msgid "Locations"
+msgstr "สถานที่"
+
+#. module: it_asset_management
+msgid "Manufacturer"
+msgstr "ผู้ผลิต"
+
+#. module: it_asset_management
+msgid "Model"
+msgstr "รุ่น"
+
+#. module: it_asset_management
+msgid "Assigned To"
+msgstr "ผู้ถือครอง"
+
+#. module: it_asset_management
+msgid "Assigned Since"
+msgstr "ถือครองตั้งแต่"
+
+#. module: it_asset_management
+msgid "Department"
+msgstr "แผนก"
+
+#. module: it_asset_management
+msgid "Draft"
+msgstr "ร่าง"
+
+#. module: it_asset_management
+msgid "Available"
+msgstr "พร้อมใช้งาน"
+
+#. module: it_asset_management
+msgid "Assigned"
+msgstr "จ่ายแล้ว"
+
+#. module: it_asset_management
+msgid "In Repair"
+msgstr "กำลังซ่อม"
+
+#. module: it_asset_management
+msgid "Retired"
+msgstr "ปลดระวาง"
+
+#. module: it_asset_management
+msgid "Disposed"
+msgstr "จำหน่ายออก"
+
+#. module: it_asset_management
+msgid "Lost"
+msgstr "สูญหาย"
+
+#. module: it_asset_management
+msgid "Assign"
+msgstr "จ่ายทรัพย์สิน"
+
+#. module: it_asset_management
+msgid "Return"
+msgstr "รับคืน"
+
+#. module: it_asset_management
+msgid "Set Available"
+msgstr "ตั้งเป็นพร้อมใช้งาน"
+
+#. module: it_asset_management
+msgid "Send to Repair"
+msgstr "ส่งซ่อม"
+
+#. module: it_asset_management
+msgid "Back from Repair"
+msgstr "รับกลับจากการซ่อม"
+
+#. module: it_asset_management
+msgid "Retire"
+msgstr "ปลดระวาง"
+
+#. module: it_asset_management
+msgid "Dispose"
+msgstr "จำหน่ายออก"
+
+#. module: it_asset_management
+msgid "Mark Lost"
+msgstr "ทำเครื่องหมายสูญหาย"
+
+#. module: it_asset_management
+msgid "Reactivate"
+msgstr "เปิดใช้งานอีกครั้ง"
+
+#. module: it_asset_management
+msgid "Hardware"
+msgstr "ฮาร์ดแวร์"
+
+#. module: it_asset_management
+msgid "Operating System"
+msgstr "ระบบปฏิบัติการ"
+
+#. module: it_asset_management
+msgid "Purchase & Warranty"
+msgstr "การจัดซื้อและการรับประกัน"
+
+#. module: it_asset_management
+msgid "Purchase"
+msgstr "การจัดซื้อ"
+
+#. module: it_asset_management
+msgid "Warranty"
+msgstr "การรับประกัน"
+
+#. module: it_asset_management
+msgid "Vendor"
+msgstr "ผู้ขาย"
+
+#. module: it_asset_management
+msgid "Invoice Reference"
+msgstr "อ้างอิงใบแจ้งหนี้"
+
+#. module: it_asset_management
+msgid "PO Reference"
+msgstr "อ้างอิงใบสั่งซื้อ"
+
+#. module: it_asset_management
+msgid "No Warranty"
+msgstr "ไม่มีการรับประกัน"
+
+#. module: it_asset_management
+msgid "Valid"
+msgstr "ยังไม่หมดอายุ"
+
+#. module: it_asset_management
+msgid "Expiring Soon"
+msgstr "ใกล้หมดอายุ"
+
+#. module: it_asset_management
+msgid "Expired"
+msgstr "หมดอายุแล้ว"
+
+#. module: it_asset_management
+msgid "Assignment History"
+msgstr "ประวัติการถือครอง"
+
+#. module: it_asset_management
+msgid "IT Asset Assignment"
+msgstr "การจ่ายทรัพย์สินไอที"
+
+#. module: it_asset_management
+msgid "Assigned On"
+msgstr "จ่ายเมื่อ"
+
+#. module: it_asset_management
+msgid "Returned On"
+msgstr "รับคืนเมื่อ"
+
+#. module: it_asset_management
+msgid "Condition Out"
+msgstr "สภาพตอนจ่าย"
+
+#. module: it_asset_management
+msgid "Condition In"
+msgstr "สภาพตอนรับคืน"
+
+#. module: it_asset_management
+msgid "New"
+msgstr "ใหม่"
+
+#. module: it_asset_management
+msgid "Good"
+msgstr "ดี"
+
+#. module: it_asset_management
+msgid "Fair"
+msgstr "พอใช้"
+
+#. module: it_asset_management
+msgid "Poor"
+msgstr "แย่"
+
+#. module: it_asset_management
+msgid "Damaged"
+msgstr "ชำรุด"
+
+#. module: it_asset_management
+msgid "Print Handover Form"
+msgstr "พิมพ์ใบส่งมอบ"
+
+#. module: it_asset_management
+msgid "Asset Handover Form"
+msgstr "ใบส่งมอบทรัพย์สินไอที"
+
+#. module: it_asset_management
+msgid "Software"
+msgstr "ซอฟต์แวร์"
+
+#. module: it_asset_management
+msgid "Software Catalogue"
+msgstr "รายการซอฟต์แวร์"
+
+#. module: it_asset_management
+msgid "Software Title"
+msgstr "ชื่อซอฟต์แวร์"
+
+#. module: it_asset_management
+msgid "Software License"
+msgstr "ไลเซนส์ซอฟต์แวร์"
+
+#. module: it_asset_management
+msgid "Software Licenses"
+msgstr "ไลเซนส์ซอฟต์แวร์"
+
+#. module: it_asset_management
+msgid "Licenses"
+msgstr "ไลเซนส์"
+
+#. module: it_asset_management
+msgid "Catalogue"
+msgstr "รายการ"
+
+#. module: it_asset_management
+msgid "Installs"
+msgstr "การติดตั้ง"
+
+#. module: it_asset_management
+msgid "Software Installs"
+msgstr "การติดตั้งซอฟต์แวร์"
+
+#. module: it_asset_management
+msgid "Publisher"
+msgstr "ผู้จัดจำหน่าย"
+
+#. module: it_asset_management
+msgid "Seats"
+msgstr "จำนวนสิทธิ์"
+
+#. module: it_asset_management
+msgid "Seat Usage (%)"
+msgstr "การใช้สิทธิ์ (%)"
+
+#. module: it_asset_management
+msgid "No Seats Left"
+msgstr "สิทธิ์เต็ม"
+
+#. module: it_asset_management
+msgid "Active"
+msgstr "ใช้งานอยู่"
+
+#. module: it_asset_management
+msgid "License Key"
+msgstr "คีย์ไลเซนส์"
+
+#. module: it_asset_management
+msgid "Perpetual"
+msgstr "ถาวร"
+
+#. module: it_asset_management
+msgid "Subscription"
+msgstr "แบบบอกรับ"
+
+#. module: it_asset_management
+msgid "Open Source"
+msgstr "โอเพนซอร์ส"
+
+#. module: it_asset_management
+msgid "Trial"
+msgstr "ทดลองใช้"
+
+#. module: it_asset_management
+msgid "Maintenance"
+msgstr "การซ่อมบำรุง"
+
+#. module: it_asset_management
+msgid "Maintenance Logs"
+msgstr "บันทึกการซ่อมบำรุง"
+
+#. module: it_asset_management
+msgid "Repair Logs"
+msgstr "บันทึกการซ่อม"
+
+#. module: it_asset_management
+msgid "IT Asset Maintenance Log"
+msgstr "บันทึกการซ่อมบำรุงทรัพย์สินไอที"
+
+#. module: it_asset_management
+msgid "Reference"
+msgstr "เลขที่อ้างอิง"
+
+#. module: it_asset_management
+msgid "Preventive"
+msgstr "เชิงป้องกัน"
+
+#. module: it_asset_management
+msgid "Corrective"
+msgstr "เชิงแก้ไข"
+
+#. module: it_asset_management
+msgid "Upgrade"
+msgstr "อัปเกรด"
+
+#. module: it_asset_management
+msgid "Inspection"
+msgstr "ตรวจสอบ"
+
+#. module: it_asset_management
+msgid "In Progress"
+msgstr "กำลังดำเนินการ"
+
+#. module: it_asset_management
+msgid "Done"
+msgstr "เสร็จสิ้น"
+
+#. module: it_asset_management
+msgid "Cancelled"
+msgstr "ยกเลิก"
+
+#. module: it_asset_management
+msgid "Start"
+msgstr "เริ่ม"
+
+#. module: it_asset_management
+msgid "Mark Done"
+msgstr "ทำเครื่องหมายเสร็จสิ้น"
+
+#. module: it_asset_management
+msgid "Cancel"
+msgstr "ยกเลิก"
+
+#. module: it_asset_management
+msgid "Technician"
+msgstr "ช่างเทคนิค"
+
+#. module: it_asset_management
+msgid "Internal"
+msgstr "ภายใน"
+
+#. module: it_asset_management
+msgid "Under Warranty"
+msgstr "อยู่ในประกัน"
+
+#. module: it_asset_management
+msgid "Problem"
+msgstr "ปัญหา"
+
+#. module: it_asset_management
+msgid "Resolution"
+msgstr "การแก้ไข"
+
+#. module: it_asset_management
+msgid "Reporting"
+msgstr "รายงาน"
+
+#. module: it_asset_management
+msgid "Asset Analysis"
+msgstr "การวิเคราะห์ทรัพย์สิน"
+
+#. module: it_asset_management
+msgid "Maintenance Cost"
+msgstr "ต้นทุนการซ่อมบำรุง"
+
+#. module: it_asset_management
+msgid "Configuration"
+msgstr "การตั้งค่า"
+
+#. module: it_asset_management
+msgid "Settings"
+msgstr "การตั้งค่า"
+
+#. module: it_asset_management
+msgid "Warranty Reminder Lead (days)"
+msgstr "แจ้งเตือนก่อนหมดประกัน (วัน)"
+
+#. module: it_asset_management
+msgid "License Reminder Lead (days)"
+msgstr "แจ้งเตือนก่อนไลเซนส์หมดอายุ (วัน)"
+
+#. module: it_asset_management
+msgid "Reminders"
+msgstr "การแจ้งเตือน"
+
+#. module: it_asset_management
+msgid "User"
+msgstr "ผู้ใช้งาน"
+
+#. module: it_asset_management
+msgid "Manager"
+msgstr "ผู้จัดการ"
+
+#. module: it_asset_management
+msgid "Photo"
+msgstr "รูปภาพ"
+
+#. module: it_asset_management
+msgid "IT Asset"
+msgstr "ทรัพย์สินไอที"
+
+#. module: it_asset_management
+msgid "IT Asset Location"
+msgstr "สถานที่ของทรัพย์สินไอที"
+
+#. module: it_asset_management
+msgid "IT Asset Category"
+msgstr "หมวดหมู่ทรัพย์สินไอที"
+
+#. module: it_asset_management
+msgid "Assign / Return IT Asset"
+msgstr "จ่าย / รับคืนทรัพย์สินไอที"
+
+#. module: it_asset_management
+msgid "Confirm"
+msgstr "ยืนยัน"
+
+#. module: it_asset_management
+msgid "Employee"
+msgstr "พนักงาน"

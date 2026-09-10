@@ -1,0 +1,18 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_itam_location_user,itam.location user,model_itam_location,group_itam_user,1,0,0,0
+access_itam_location_manager,itam.location manager,model_itam_location,group_itam_manager,1,1,1,1
+access_itam_asset_category_user,itam.asset.category user,model_itam_asset_category,group_itam_user,1,0,0,0
+access_itam_asset_category_manager,itam.asset.category manager,model_itam_asset_category,group_itam_manager,1,1,1,1
+access_itam_asset_user,itam.asset user,model_itam_asset,group_itam_user,1,1,1,0
+access_itam_asset_manager,itam.asset manager,model_itam_asset,group_itam_manager,1,1,1,1
+access_itam_asset_assignment_user,itam.asset.assignment user,model_itam_asset_assignment,group_itam_user,1,1,1,0
+access_itam_asset_assignment_manager,itam.asset.assignment manager,model_itam_asset_assignment,group_itam_manager,1,1,1,1
+access_itam_software_user,itam.software user,model_itam_software,group_itam_user,1,0,0,0
+access_itam_software_manager,itam.software manager,model_itam_software,group_itam_manager,1,1,1,1
+access_itam_software_license_user,itam.software.license user,model_itam_software_license,group_itam_user,1,0,0,0
+access_itam_software_license_manager,itam.software.license manager,model_itam_software_license,group_itam_manager,1,1,1,1
+access_itam_software_install_user,itam.software.install user,model_itam_software_install,group_itam_user,1,1,1,1
+access_itam_software_install_manager,itam.software.install manager,model_itam_software_install,group_itam_manager,1,1,1,1
+access_itam_maintenance_log_user,itam.maintenance.log user,model_itam_maintenance_log,group_itam_user,1,1,1,0
+access_itam_maintenance_log_manager,itam.maintenance.log manager,model_itam_maintenance_log,group_itam_manager,1,1,1,1
+access_itam_assign_wizard_user,itam.assign.wizard user,model_itam_assign_wizard,group_itam_user,1,1,1,1

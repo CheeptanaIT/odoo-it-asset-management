@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem id="menu_itam_root" name="IT Assets" web_icon="it_asset_management,static/description/icon.png"
+              groups="it_asset_management.group_itam_user" sequence="90"/>
+
+    <!-- Assets -->
+    <menuitem id="menu_itam_assets" name="Assets" parent="menu_itam_root" sequence="10"/>
+    <menuitem id="menu_itam_asset" name="Assets" parent="menu_itam_assets"
+              action="action_itam_asset" sequence="10"/>
+
+    <!-- Software -->
+    <menuitem id="menu_itam_software_root" name="Software" parent="menu_itam_root" sequence="20"/>
+    <menuitem id="menu_itam_software_license" name="Licenses" parent="menu_itam_software_root"
+              action="action_itam_software_license" sequence="10"/>
+    <menuitem id="menu_itam_software_catalogue" name="Catalogue" parent="menu_itam_software_root"
+              action="action_itam_software" sequence="20"/>
+    <menuitem id="menu_itam_software_install" name="Installs" parent="menu_itam_software_root"
+              action="action_itam_software_install" sequence="30"/>
+
+    <!-- Maintenance -->
+    <menuitem id="menu_itam_maintenance_root" name="Maintenance" parent="menu_itam_root" sequence="30"/>
+    <menuitem id="menu_itam_maintenance_log" name="Repair Logs" parent="menu_itam_maintenance_root"
+              action="action_itam_maintenance_log" sequence="10"/>
+
+    <!-- Reporting -->
+    <menuitem id="menu_itam_reporting" name="Reporting" parent="menu_itam_root" sequence="80"/>
+    <menuitem id="menu_itam_report_assets" name="Asset Analysis" parent="menu_itam_reporting"
+              action="action_itam_asset_analysis" sequence="10"/>
+    <menuitem id="menu_itam_report_maintenance" name="Maintenance Cost" parent="menu_itam_reporting"
+              action="action_itam_maintenance_cost" sequence="20"/>
+
+    <!-- Configuration -->
+    <menuitem id="menu_itam_config" name="Configuration" parent="menu_itam_root" sequence="90"
+              groups="it_asset_management.group_itam_manager"/>
+    <menuitem id="menu_itam_config_category" name="Categories" parent="menu_itam_config"
+              action="action_itam_asset_category" sequence="10"/>
+    <menuitem id="menu_itam_config_location" name="Locations" parent="menu_itam_config"
+              action="action_itam_location" sequence="20"/>
+    <menuitem id="menu_itam_config_settings" name="Settings" parent="menu_itam_config"
+              action="action_itam_config_settings" sequence="30"/>
+
+</odoo>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_itam_asset_category_tree" model="ir.ui.view">
+        <field name="name">itam.asset.category.tree</field>
+        <field name="model">itam.asset.category</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="complete_name" string="Category"/>
+                <field name="code"/>
+                <field name="default_depreciation_years"/>
+                <field name="asset_count" string="# Assets"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_itam_asset_category_form" model="ir.ui.view">
+        <field name="name">itam.asset.category.form</field>
+        <field name="model">itam.asset.category</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_assets" type="object" class="oe_stat_button" icon="fa-desktop">
+                            <field name="asset_count" widget="statinfo" string="Assets"/>
+                        </button>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="code"/>
+                            <field name="parent_id"/>
+                        </group>
+                        <group>
+                            <field name="default_depreciation_years"/>
+                            <field name="active" widget="boolean_toggle"/>
+                        </group>
+                    </group>
+                    <field name="note" placeholder="Internal notes..."/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_itam_asset_category" model="ir.actions.act_window">
+        <field name="name">Asset Categories</field>
+        <field name="res_model">itam.asset.category</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>

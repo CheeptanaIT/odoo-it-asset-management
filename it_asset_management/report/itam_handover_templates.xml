@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="report_itam_handover">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-set="company" t-value="doc.company_id or doc.asset_id.company_id"/>
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2 class="text-center">
+                            <span t-if="doc.is_open">IT Asset Handover Form</span>
+                            <span t-else="">IT Asset Return Form</span>
+                        </h2>
+                        <p class="text-center text-muted"
+                           t-out="doc.asset_id.company_id.name"/>
+
+                        <table class="table table-sm o_main_table mt-4">
+                            <tr>
+                                <th style="width: 30%;">Asset Tag</th>
+                                <td t-out="doc.asset_id.asset_tag"/>
+                            </tr>
+                            <tr>
+                                <th>Description</th>
+                                <td t-out="doc.asset_id.name"/>
+                            </tr>
+                            <tr>
+                                <th>Category</th>
+                                <td t-out="doc.asset_id.category_id.display_name"/>
+                            </tr>
+                            <tr>
+                                <th>Serial Number</th>
+                                <td t-out="doc.asset_id.serial_no or ''"/>
+                            </tr>
+                            <tr>
+                                <th>Employee</th>
+                                <td t-out="doc.employee_id.name or ''"/>
+                            </tr>
+                            <tr>
+                                <th>Department</th>
+                                <td t-out="doc.department_id.name or ''"/>
+                            </tr>
+                            <tr>
+                                <th>Location</th>
+                                <td t-out="doc.location_id.complete_name or ''"/>
+                            </tr>
+                            <tr>
+                                <th>Handed Out On</th>
+                                <td><span t-field="doc.date_out"/></td>
+                            </tr>
+                            <tr>
+                                <th>Condition Out</th>
+                                <td><span t-field="doc.condition_out"/></td>
+                            </tr>
+                            <tr t-if="not doc.is_open">
+                                <th>Returned On</th>
+                                <td><span t-field="doc.date_in"/></td>
+                            </tr>
+                            <tr t-if="not doc.is_open">
+                                <th>Condition In</th>
+                                <td><span t-field="doc.condition_in"/></td>
+                            </tr>
+                        </table>
+
+                        <p t-if="doc.note" class="mt-3">
+                            <strong>Notes:</strong> <span t-out="doc.note"/>
+                        </p>
+
+                        <p class="mt-4">
+                            The employee acknowledges receipt of the asset described above and
+                            agrees to use it in accordance with the company IT policy and to
+                            return it in good condition on request or on termination of employment.
+                        </p>
+
+                        <div class="row mt-5">
+                            <div class="col-6 text-center">
+                                <p>_____________________________</p>
+                                <p>Issued by: <span t-out="doc.assigned_by.name or ''"/></p>
+                                <p>Date: <span t-field="doc.date_out"/></p>
+                            </div>
+                            <div class="col-6 text-center">
+                                <p>_____________________________</p>
+                                <p>Received by: <span t-out="doc.employee_id.name or ''"/></p>
+                                <p>Date: ______________</p>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>

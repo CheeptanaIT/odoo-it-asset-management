@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_itam_software_tree" model="ir.ui.view">
+        <field name="name">itam.software.tree</field>
+        <field name="model">itam.software</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="publisher"/>
+                <field name="category"/>
+                <field name="license_count" string="# Licenses"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_itam_software_form" model="ir.ui.view">
+        <field name="name">itam.software.form</field>
+        <field name="model">itam.software</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_licenses" type="object" class="oe_stat_button" icon="fa-key">
+                            <field name="license_count" widget="statinfo" string="Licenses"/>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <h1><field name="name" placeholder="e.g. Microsoft Office"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="publisher"/>
+                            <field name="category"/>
+                        </group>
+                        <group>
+                            <field name="active" widget="boolean_toggle"/>
+                        </group>
+                    </group>
+                    <field name="note" placeholder="Notes..."/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_itam_software" model="ir.actions.act_window">
+        <field name="name">Software Catalogue</field>
+        <field name="res_model">itam.software</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="view_itam_software_install_tree" model="ir.ui.view">
+        <field name="name">itam.software.install.tree</field>
+        <field name="model">itam.software.install</field>
+        <field name="arch" type="xml">
+            <tree decoration-muted="is_active == False">
+                <field name="license_id"/>
+                <field name="software_id"/>
+                <field name="asset_id"/>
+                <field name="employee_id"/>
+                <field name="install_date"/>
+                <field name="uninstall_date"/>
+                <field name="is_active" string="Active"/>
+                <button name="action_uninstall" type="object" string="Uninstall" icon="fa-times"
+                        invisible="is_active == False"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_itam_software_install_form" model="ir.ui.view">
+        <field name="name">itam.software.install.form</field>
+        <field name="model">itam.software.install</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="license_id"/>
+                            <field name="asset_id"/>
+                            <field name="employee_id"/>
+                        </group>
+                        <group>
+                            <field name="install_date"/>
+                            <field name="uninstall_date"/>
+                        </group>
+                    </group>
+                    <field name="note"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_itam_software_install" model="ir.actions.act_window">
+        <field name="name">Software Installs</field>
+        <field name="res_model">itam.software.install</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>

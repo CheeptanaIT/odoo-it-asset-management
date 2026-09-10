@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="res_config_settings_view_form_itam" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.itam</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="inside">
+                <app string="IT Asset Management" name="it_asset_management"
+                     logo="/it_asset_management/static/description/icon.png">
+                    <block title="Reminders" name="itam_reminders">
+                        <setting string="Warranty reminder lead time"
+                                 help="Create an activity this many days before an asset warranty expires.">
+                            <field name="itam_warranty_lead_days"/>
+                            <span class="text-muted">days</span>
+                        </setting>
+                        <setting string="License reminder lead time"
+                                 help="Create an activity this many days before a software license expires.">
+                            <field name="itam_license_lead_days"/>
+                            <span class="text-muted">days</span>
+                        </setting>
+                    </block>
+                </app>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="action_itam_config_settings" model="ir.actions.act_window">
+        <field name="name">Settings</field>
+        <field name="res_model">res.config.settings</field>
+        <field name="view_mode">form</field>
+        <field name="target">inline</field>
+        <field name="context">{'module': 'it_asset_management'}</field>
+    </record>
+
+</odoo>

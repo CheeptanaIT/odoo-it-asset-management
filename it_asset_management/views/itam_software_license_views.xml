@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_itam_software_license_tree" model="ir.ui.view">
+        <field name="name">itam.software.license.tree</field>
+        <field name="model">itam.software.license</field>
+        <field name="arch" type="xml">
+            <tree decoration-warning="state == 'expiring'" decoration-danger="state in ('expired','depleted')">
+                <field name="name"/>
+                <field name="software_id"/>
+                <field name="license_type"/>
+                <field name="seats_used"/>
+                <field name="seats_total"/>
+                <field name="seat_usage" widget="progressbar"/>
+                <field name="expiry_date"/>
+                <field name="state" widget="badge"
+                       decoration-success="state == 'active'"
+                       decoration-warning="state == 'expiring'"
+                       decoration-danger="state in ('expired','depleted')"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_itam_software_license_form" model="ir.ui.view">
+        <field name="name">itam.software.license.form</field>
+        <field name="model">itam.software.license</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_installs" type="object" class="oe_stat_button" icon="fa-desktop">
+                            <field name="seats_used" widget="statinfo" string="Seats Used"/>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <h1><field name="name" placeholder="e.g. MS Office 2021 - Volume"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="software_id"/>
+                            <field name="license_type"/>
+                            <field name="license_key" password="True"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                        </group>
+                        <group>
+                            <field name="seats_total"/>
+                            <field name="seats_used"/>
+                            <field name="seats_available"/>
+                            <field name="seat_usage" widget="progressbar"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Purchase" name="purchase">
+                            <group>
+                                <group>
+                                    <field name="purchase_date"/>
+                                    <field name="expiry_date"/>
+                                    <field name="vendor_id"/>
+                                </group>
+                                <group>
+                                    <field name="purchase_price"/>
+                                    <field name="currency_id" invisible="1"/>
+                                    <field name="invoice_ref"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Installs" name="installs">
+                            <field name="install_ids" context="{'default_license_id': id}">
+                                <tree editable="bottom" decoration-muted="is_active == False">
+                                    <field name="asset_id"/>
+                                    <field name="employee_id"/>
+                                    <field name="install_date"/>
+                                    <field name="uninstall_date"/>
+                                    <field name="is_active" string="Active"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Notes" name="notes">
+                            <field name="note"/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_itam_software_license_search" model="ir.ui.view">
+        <field name="name">itam.software.license.search</field>
+        <field name="model">itam.software.license</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="software_id"/>
+                <field name="vendor_id"/>
+                <filter name="f_active" string="Active" domain="[('state','=','active')]"/>
+                <filter name="f_expiring" string="Expiring Soon" domain="[('state','=','expiring')]"/>
+                <filter name="f_expired" string="Expired" domain="[('state','=','expired')]"/>
+                <filter name="f_depleted" string="No Seats Left" domain="[('state','=','depleted')]"/>
+                <group expand="0" string="Group By">
+                    <filter name="g_software" string="Software" context="{'group_by': 'software_id'}"/>
+                    <filter name="g_type" string="Type" context="{'group_by': 'license_type'}"/>
+                    <filter name="g_state" string="Status" context="{'group_by': 'state'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="view_itam_software_license_graph" model="ir.ui.view">
+        <field name="name">itam.software.license.graph</field>
+        <field name="model">itam.software.license</field>
+        <field name="arch" type="xml">
+            <graph string="License Spend" type="bar">
+                <field name="software_id"/>
+                <field name="purchase_price" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="action_itam_software_license" model="ir.actions.act_window">
+        <field name="name">Software Licenses</field>
+        <field name="res_model">itam.software.license</field>
+        <field name="view_mode">tree,form,graph</field>
+        <field name="search_view_id" ref="view_itam_software_license_search"/>
+    </record>
+
+</odoo>
