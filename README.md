@@ -1,4 +1,18 @@
-# IT Asset Management for Odoo 18
+<div align="center">
+
+# 🖥️ IT Asset Management for Odoo 18
+
+**ทะเบียนทรัพย์สิน IT ครบวงจร** — hardware, การมอบหมาย, license ซอฟต์แวร์ และงานซ่อมบำรุง ใน Odoo
+
+[![Odoo](https://img.shields.io/badge/Odoo-18.0-714B67?style=flat-square&logo=odoo&logoColor=white)](https://www.odoo.com)
+[![Python](https://img.shields.io/badge/Python-3-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org)
+[![License](https://img.shields.io/badge/License-LGPL--3-blue?style=flat-square)](LICENSE)
+[![i18n](https://img.shields.io/badge/UI-EN%20%7C%20TH-green?style=flat-square)]()
+
+</div>
+
+> **หมายเหตุ:** ชื่อ repo ยังเป็น `ITAM-Odoo17` แต่โค้ดและ manifest เป็นเวอร์ชัน **18.0**
+
 
 Two addons live in this folder:
 
@@ -55,3 +69,7 @@ maintenance state round-trip.
   Peripheral) is created on install.
 * **Locations** – optional hierarchical places.
 * **Settings** – warranty / license reminder lead time (days).
+
+## License
+
+[LGPL-3.0](LICENSE) — ตามที่ประกาศไว้ใน `__manifest__.py` ของทั้งสองโมดูล
