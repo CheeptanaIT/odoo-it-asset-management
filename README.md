@@ -11,8 +11,6 @@
 
 </div>
 
-> **หมายเหตุ:** ชื่อ repo ยังเป็น `ITAM-Odoo17` แต่โค้ดและ manifest เป็นเวอร์ชัน **18.0**
-
 
 Two addons live in this folder:
 
